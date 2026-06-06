@@ -1,0 +1,7 @@
+.gradle/
+.idea/
+*.pyc
+__pycache__/
+.venv/
+.env
+price_history.db

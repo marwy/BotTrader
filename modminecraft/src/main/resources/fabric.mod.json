@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "id": "marwy",
+  "version": "${version}",
+  "name": "test",
+  "description": "",
+  "authors": [],
+  "contact": {},
+  "license": "All-Rights-Reserved",
+  "icon": "assets/marwy/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "fabric-datagen": [
+      "org.marwy.marwy.client.MarwyDataGenerator"
+    ],
+    "client": [
+      "org.marwy.marwy.client.MarwyClient"
+    ],
+    "main": [
+      "org.marwy.marwy.Marwy"
+    ]
+  },
+  "mixins": [
+    "marwy.mixins.json",
+    {
+      "config": "marwy.client.mixins.json",
+      "environment": "client"
+    }
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric-api": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}
+  
